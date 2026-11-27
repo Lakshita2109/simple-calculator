@@ -14,7 +14,9 @@ def multiply(a, b):
 
 
 def divide(a, b):
-    return a / b
+    if b == 0:
+        return None
+    return round(a / b, 4)
 
 
 OPERATIONS = {"+": add, "-": subtract, "*": multiply, "/": divide}
