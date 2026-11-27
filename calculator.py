@@ -14,6 +14,8 @@ def multiply(a, b):
 
 
 def divide(a, b):
+    if b == 0:
+        raise ValueError("Cannot divide by zero")
     return a / b
 
 
@@ -28,7 +30,10 @@ def main():
     if op not in OPERATIONS:
         print("Unknown operation:", op)
         return
-    print("Result:", OPERATIONS[op](a, b))
+    try:
+        print("Result:", OPERATIONS[op](a, b))
+    except ValueError as err:
+        print("Error:", err)
 
 
 if __name__ == "__main__":
