@@ -11,3 +11,5 @@ Python 3.8 or newer.
 ```bash
 python3 calculator.py
 ```
+
+Division results are rounded to 4 decimal places.
